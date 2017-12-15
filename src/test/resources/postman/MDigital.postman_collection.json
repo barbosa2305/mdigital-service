@@ -1,0 +1,209 @@
+{
+	"info": {
+		"name": "MDigital",
+		"_postman_id": "771bfa58-09f8-d8a2-46fb-cc2e16b1d32d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Clientes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/mdigital-service/api/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mdigital-service",
+						"api",
+						"cliente"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cliente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/mdigital-service/api/cliente/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mdigital-service",
+						"api",
+						"cliente",
+						"2"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Clientes Por Faixa Renda",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/mdigital-service/api/cliente/faixaRenda/500/2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mdigital-service",
+						"api",
+						"cliente",
+						"faixaRenda",
+						"500",
+						"2000"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir Cliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"Ananias Souza\",\n\t\"telefone\": \"(61)97777-7777\",\n\t\"email\": \"ananias.souza@yahoo.com.br\",\n\t\"rendaBruta\": \"1435.896\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/mdigital-service/api/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mdigital-service",
+						"api",
+						"cliente"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Ananias Souza Silva\",\n    \"telefone\": \"(61)97777-7777\",\n    \"email\": \"ananias.souza@yahoo.com.br\",\n    \"rendaBruta\": \"1435.74\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/mdigital-service/api/cliente/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mdigital-service",
+						"api",
+						"cliente",
+						"3"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/mdigital-service/api/cliente/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mdigital-service",
+						"api",
+						"cliente",
+						"4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
