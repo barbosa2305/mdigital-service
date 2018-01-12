@@ -28,7 +28,10 @@
 		<param-name>resteasy.servlet.mapping.prefix</param-name>
 		<param-value>/api</param-value>
 	</context-param>
-
+	<context-param>
+		<param-name>resteasy.providers</param-name>	
+		<param-value>br.com.javaweb.mdigital.exception.DefaultExceptionHandler</param-value>
+	</context-param>
 
 	<!-- Mapeando o filtro para permitir a política de mesma origem no browser -->
 	<filter>
