@@ -9,7 +9,7 @@ public class NomeClienteNaoInformadoRule {
 	
 	public void valida(String nome) {
 		if (nome.isEmpty()) {
-			throw new NomeClienteNaoInformadoException("Nome do cliente não foi informado!");
+			throw new NomeClienteNaoInformadoException("Nome do cliente não foi informado.");
 		}
 	}
 }

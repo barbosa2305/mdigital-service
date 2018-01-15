@@ -9,7 +9,7 @@ public class EmailClienteNaoInformadoRule {
 
 	public void valida(String email) {
 		if (email.isEmpty()) {
-			throw new EmailClienteNaoInformadoException("E-mail do cliente não foi informado!");
+			throw new EmailClienteNaoInformadoException("E-mail do cliente não foi informado.");
 		}
 	}
 }

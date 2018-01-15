@@ -20,7 +20,7 @@ public class DefaultExceptionHandler implements ExceptionMapper<Throwable> {
 			
 		} else {
 			response.setStatus("ERROR");
-			response.setMessage("Ocorreu um erro interno! Entre em contato com o administrador do sistema.");
+			response.setMessage("Ocorreu um erro interno. Entre em contato com o administrador do sistema.");
 			return Response.serverError().entity(response).type(MediaType.APPLICATION_JSON).build();
 		}
 	}

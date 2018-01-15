@@ -10,7 +10,7 @@ public class ClienteNaoEncontradoRule {
 
 	public void valida(Cliente cliente) {
 		if (cliente == null) {
-			throw new ClienteNaoEncontradoException("Cliente não encontrado!");
+			throw new ClienteNaoEncontradoException("Cliente não foi encontrado.");
 		}
 	}
 }

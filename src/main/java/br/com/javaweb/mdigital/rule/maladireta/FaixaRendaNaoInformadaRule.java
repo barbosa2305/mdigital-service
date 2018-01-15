@@ -12,11 +12,11 @@ public class FaixaRendaNaoInformadaRule {
 	
 	public void valida(BigDecimal faixaRendaInicial, BigDecimal faixaRendaFinal) {
 		if (faixaRendaInicial.signum() <= 0) {
-			throw new FaixaRendaInicialNaoInformadaException("Faixa de renda inicial não foi informada!");
+			throw new FaixaRendaInicialNaoInformadaException("Faixa de renda inicial não foi informada.");
 		}
 		
 		if (faixaRendaFinal.signum() <= 0 ) {
-			throw new FaixaRendaFinalNaoInformadaException("Faixa de renda final não foi informada!");
+			throw new FaixaRendaFinalNaoInformadaException("Faixa de renda final não foi informada.");
 		}
 	}
 }

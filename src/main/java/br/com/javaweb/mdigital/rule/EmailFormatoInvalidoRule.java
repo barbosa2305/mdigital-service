@@ -12,7 +12,7 @@ public class EmailFormatoInvalidoRule {
 	
 	public void valida(String email) {
 		if (!email.matches(EMAIL_PATTERN)) {
-			throw new EmailFormatoInvalidoException("E-mail com formato inválido!");
+			throw new EmailFormatoInvalidoException("E-mail com formato inválido.");
 		}
 	}
 }
