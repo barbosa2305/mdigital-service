@@ -1,4 +1,4 @@
-package br.com.javaweb.mdigital.cmd;
+package br.com.javaweb.mdigital.cmd.cliente;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

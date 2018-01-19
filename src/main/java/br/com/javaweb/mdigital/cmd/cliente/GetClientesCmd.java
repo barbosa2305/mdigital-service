@@ -1,4 +1,4 @@
-package br.com.javaweb.mdigital.cmd;
+package br.com.javaweb.mdigital.cmd.cliente;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -17,12 +17,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.javaweb.mdigital.cmd.AlterarClienteCmd;
-import br.com.javaweb.mdigital.cmd.ExcluirClienteCmd;
-import br.com.javaweb.mdigital.cmd.GetClienteCmd;
-import br.com.javaweb.mdigital.cmd.GetClientesCmd;
-import br.com.javaweb.mdigital.cmd.GetClientesPorFaixaRendaCmd;
-import br.com.javaweb.mdigital.cmd.IncluirClienteCmd;
+import br.com.javaweb.mdigital.cmd.cliente.AlterarClienteCmd;
+import br.com.javaweb.mdigital.cmd.cliente.ExcluirClienteCmd;
+import br.com.javaweb.mdigital.cmd.cliente.GetClienteCmd;
+import br.com.javaweb.mdigital.cmd.cliente.GetClientesCmd;
+import br.com.javaweb.mdigital.cmd.cliente.GetClientesPorFaixaRendaCmd;
+import br.com.javaweb.mdigital.cmd.cliente.IncluirClienteCmd;
 import br.com.javaweb.mdigital.to.ClienteTO;
 
 @Controller
@@ -39,7 +39,7 @@ public class ClienteService {
 	private GetClientesPorFaixaRendaCmd getClientesPorFaixaRendaCmd; 
 	
 	@Autowired
-	private IncluirClienteCmd incluirContatoCmd;
+	private IncluirClienteCmd incluirClienteCmd;
 	
 	@Autowired
 	private AlterarClienteCmd alterarClienteCmd;
@@ -63,9 +63,8 @@ public class ClienteService {
 		return getClienteCmd.get(idCliente);
 	}
 	
-	
 	@GET
-	@Path("/faixaRenda/{rendaInicial}/{rendaFinal}")
+	@Path("/faixarenda/{rendaInicial}/{rendaFinal}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Transactional
 	public List<ClienteTO> getClientesPorFaixaRenda(@PathParam("rendaInicial") BigDecimal faixaRendaInicial,
@@ -79,7 +78,7 @@ public class ClienteService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Transactional
 	public ClienteTO incluirCliente(ClienteTO cliente) {
-		return incluirContatoCmd.incluir(cliente);
+		return incluirClienteCmd.incluir(cliente);
 	}
 	
 	@PUT

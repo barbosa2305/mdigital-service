@@ -11,7 +11,7 @@ import br.com.javaweb.mdigital.exception.maladireta.FaixaRendaInicialNaoInformad
 public class FaixaRendaNaoInformadaRule {
 	
 	public void valida(BigDecimal faixaRendaInicial, BigDecimal faixaRendaFinal) {
-		if (faixaRendaInicial.signum() <= 0) {
+		if (faixaRendaInicial.signum() < 0) {
 			throw new FaixaRendaInicialNaoInformadaException("Faixa de renda inicial não foi informada.");
 		}
 		
