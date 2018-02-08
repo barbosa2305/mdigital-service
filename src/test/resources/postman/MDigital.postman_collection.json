@@ -7,203 +7,376 @@
 	},
 	"item": [
 		{
-			"name": "Listar Clientes",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+			"name": "Cliente",
+			"description": "",
+			"item": [
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"cliente"
+							]
+						},
+						"description": ""
 					},
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/mdigital-service/api/cliente",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"mdigital-service",
-						"api",
-						"cliente"
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Get Cliente",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+				{
+					"name": "Get Cliente",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/cliente/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"cliente",
+								"2"
+							]
+						},
+						"description": ""
 					},
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/mdigital-service/api/cliente/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"mdigital-service",
-						"api",
-						"cliente",
-						"2"
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Listar Clientes Por Faixa Renda",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+				{
+					"name": "Listar Clientes Por Faixa Renda",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/cliente/faixarenda/3000/4000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"cliente",
+								"faixarenda",
+								"3000",
+								"4000"
+							]
+						},
+						"description": ""
 					},
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/mdigital-service/api/cliente/faixaRenda/500/2000",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"mdigital-service",
-						"api",
-						"cliente",
-						"faixaRenda",
-						"500",
-						"2000"
-					]
+				{
+					"name": "Incluir Cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Ananias Souza\",\n\t\"telefone\": \"(61)97777-7777\",\n\t\"email\": \"ananias.souza@yahoo.com.br\",\n\t\"rendaBruta\": \"1435.896\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"cliente"
+							]
+						},
+						"description": ""
+					},
+					"response": []
 				},
-				"description": ""
-			},
-			"response": []
+				{
+					"name": "Alterar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Ananias Souza Silva\",\n    \"telefone\": \"(61)97777-7777\",\n    \"email\": \"ananias.souza@yahoo.com.br\",\n    \"rendaBruta\": \"1435.74\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/cliente/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"cliente",
+								"3"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/cliente/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"cliente",
+								"4"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		},
 		{
-			"name": "Incluir Cliente",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"nome\":\"Ananias Souza\",\n\t\"telefone\": \"(61)97777-7777\",\n\t\"email\": \"ananias.souza@yahoo.com.br\",\n\t\"rendaBruta\": \"1435.896\"\n}"
+			"name": "Mala Direta",
+			"description": "",
+			"item": [
+				{
+					"name": "Listar Malas Diretas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/maladireta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"maladireta"
+							]
+						},
+						"description": ""
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/mdigital-service/api/cliente",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"mdigital-service",
-						"api",
-						"cliente"
-					]
+				{
+					"name": "Get Mala Direta",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZWxhc3RpYzplbGFzdGlj"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"size\": 250,\"stored_fields\" : [\"iCodigo\"],\"query\": {\"query_string\": {\"default_field\": \"conteudo\",\"query\":\"DISI\\\\/STI\", \"minimum_should_match\":\"75%\"}},\"highlight\" : {  \"pre_tags\" : [\"<span style='background-color:yellow;font-weight:bold'>\"], \"post_tags\" : [\"</span>\"], \"fields\" : {\"conteudo\" : {\"fragment_size\" : 50,\"number_of_fragments\" : 1}}}}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/maladireta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"maladireta",
+								"1"
+							]
+						},
+						"description": ""
+					},
+					"response": []
 				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Alterar Cliente",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"nome\": \"Ananias Souza Silva\",\n    \"telefone\": \"(61)97777-7777\",\n    \"email\": \"ananias.souza@yahoo.com.br\",\n    \"rendaBruta\": \"1435.74\"\n}"
+				{
+					"name": "Incluir Mala Direta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"Mala direta 1\",\n\t\"faixaRendaInicial\": \"0.00\",\n\t\"faixaRendaFinal\": \"2000.00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/maladireta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"maladireta"
+							]
+						},
+						"description": ""
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/mdigital-service/api/cliente/3",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"mdigital-service",
-						"api",
-						"cliente",
-						"3"
-					]
+				{
+					"name": "Alterar Mala Direta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Ananias Souza Silva\",\n    \"telefone\": \"(61)97777-7777\",\n    \"email\": \"ananias.souza@yahoo.com.br\",\n    \"rendaBruta\": \"1435.74\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/maladireta/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"maladireta",
+								"2"
+							]
+						},
+						"description": ""
+					},
+					"response": []
 				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Excluir Cliente",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://localhost:8080/mdigital-service/api/cliente/4",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"mdigital-service",
-						"api",
-						"cliente",
-						"4"
-					]
-				},
-				"description": ""
-			},
-			"response": []
+				{
+					"name": "Excluir Mala Direta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/mdigital-service/api/maladireta/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mdigital-service",
+								"api",
+								"maladireta",
+								"3"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
