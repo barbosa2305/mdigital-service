@@ -30,7 +30,7 @@
 	</context-param>
 	<context-param>
 		<param-name>resteasy.providers</param-name>	
-		<param-value>br.com.javaweb.mdigital.exception.DefaultExceptionHandler</param-value>
+		<param-value>br.com.javaweb.mdigital.exception.DefaultExceptionHandlerNegocio, br.com.javaweb.mdigital.exception.DefaultExceptionHandlerThrowable</param-value>
 	</context-param>
 
 	<!-- Mapeando o filtro para permitir a política de mesma origem no browser -->

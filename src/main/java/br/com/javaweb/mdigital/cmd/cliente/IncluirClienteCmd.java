@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component;
 
 import br.com.javaweb.mdigital.dao.ClienteDAO;
 import br.com.javaweb.mdigital.entity.Cliente;
-import br.com.javaweb.mdigital.rule.EmailFormatoInvalidoRule;
 import br.com.javaweb.mdigital.rule.cliente.EmailClienteNaoInformadoRule;
 import br.com.javaweb.mdigital.rule.cliente.NomeClienteNaoInformadoRule;
 import br.com.javaweb.mdigital.rule.cliente.RendaClienteNaoInformadaRule;
 import br.com.javaweb.mdigital.rule.cliente.TelefoneClienteNaoInformadoRule;
+import br.com.javaweb.mdigital.rule.commons.EmailFormatoInvalidoRule;
 import br.com.javaweb.mdigital.to.ClienteTO;
 
 @Component
